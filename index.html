@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="P. Karrer and A. Hofmann (1929); translated by Rhadamanthus 2026-04-29">
+<title>Polysaccharides XXXIX. On the enzymatic degradation of chitin and chitosan I. — Karrer & Hofmann (1929)</title>
+<style>
+:root {
+    --fg: #1a1a1a;
+    --fg-soft: #444;
+    --fg-mute: #777;
+    --bg: #fafaf7;
+    --bg-card: #ffffff;
+    --bg-code: #f1efe9;
+    --bg-quote: #f6f3eb;
+    --accent: #6b3e1a;
+    --rule: #d6d2c4;
+    --link: #874a18;
+    --link-hover: #a35a1c;
+    --table-stripe: #f5f2ea;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 17px; }
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua",
+                 Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+}
+
+.page {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 48px 56px 96px;
+    background: var(--bg-card);
+    box-shadow: 0 0 1px rgba(0,0,0,0.04), 0 12px 32px rgba(0,0,0,0.05);
+    border-left: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Iowan Old Style", Palatino, Georgia, serif;
+    color: var(--fg);
+    line-height: 1.25;
+    margin-top: 1.6em;
+    margin-bottom: 0.4em;
+}
+
+h1 {
+    font-size: 1.95em;
+    margin-top: 0;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.35em;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.45em;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.25em;
+    margin-top: 2.2em;
+}
+
+h3 {
+    font-size: 1.18em;
+    color: var(--fg);
+    margin-top: 1.7em;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.02em;
+    color: var(--fg-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-top: 1.4em;
+}
+
+p { margin: 0.7em 0; }
+
+a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--link); }
+a:hover { color: var(--link-hover); border-bottom-style: solid; }
+
+code, pre {
+    font-family: "JetBrains Mono", "SF Mono", Menlo, Monaco, Consolas,
+                 "Liberation Mono", monospace;
+    font-size: 0.92em;
+}
+code { background: var(--bg-code); padding: 1px 5px; border-radius: 3px; }
+pre {
+    background: var(--bg-code);
+    padding: 14px 18px;
+    border-radius: 5px;
+    overflow-x: auto;
+    border: 1px solid var(--rule);
+}
+pre code { background: transparent; padding: 0; }
+
+blockquote {
+    margin: 1.2em 0;
+    padding: 0.4em 1.2em;
+    background: var(--bg-quote);
+    border-left: 4px solid var(--accent);
+    color: var(--fg-soft);
+    font-style: italic;
+}
+blockquote p { margin: 0.5em 0; }
+blockquote strong { color: var(--accent); font-style: normal; }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.2em 0;
+    font-size: 0.94em;
+}
+th, td {
+    padding: 6px 12px;
+    border: 1px solid var(--rule);
+    text-align: left;
+    vertical-align: top;
+}
+th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+}
+tbody tr:nth-child(even) { background: var(--table-stripe); }
+td:first-child { font-weight: 500; }
+
+hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2.2em 0;
+}
+
+figure {
+    margin: 1.6em 0;
+    text-align: center;
+}
+figure img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    background: #fff;
+    border: 1px solid var(--rule);
+    padding: 8px;
+    border-radius: 3px;
+}
+figure.formula {
+    margin: 1.0em 0;
+}
+figure.formula img {
+    max-width: 540px;
+    border: none;
+    padding: 4px 0;
+}
+figcaption {
+    display: block;
+    color: var(--fg-mute);
+    font-size: 0.9em;
+    font-style: italic;
+    margin-top: 0.5em;
+    text-align: center;
+}
+figcaption strong { color: var(--accent); font-style: normal; }
+
+ul, ol { padding-left: 1.6em; }
+li { margin: 0.25em 0; }
+
+/* Citation/metadata table at top of paper - more compact */
+table:first-of-type {
+    font-size: 0.9em;
+}
+table:first-of-type th { display: none; }
+table:first-of-type td:first-child {
+    width: 30%;
+    background: var(--bg-quote);
+}
+
+/* TL;DR and Contents sections - softer */
+h2#tldr + p, h2#contents + p { color: var(--fg-soft); }
+h2#contents + ul {
+    background: var(--bg-quote);
+    padding: 16px 16px 16px 36px;
+    border-left: 3px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+    list-style: none;
+}
+h2#contents + ul li::before {
+    content: "▪";
+    color: var(--accent);
+    margin-right: 0.5em;
+    margin-left: -1em;
+}
+h2#contents + ul ul { padding-left: 1.5em; }
+h2#contents + ul ul li::before { content: "·"; }
+
+sup { font-size: 0.75em; }
+
+/* Print styles */
+@media print {
+    html { font-size: 11pt; }
+    body { background: white; }
+    .page {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+    }
+    h1, h2, h3 { page-break-after: avoid; }
+    table, blockquote, pre { page-break-inside: avoid; }
+    a { color: var(--fg); border-bottom: none; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: var(--fg-mute); }
+    h2#contents + ul, blockquote { background: #f5f5f0 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    th { background: #555 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    tbody tr:nth-child(even) { background: #f8f8f4 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+    html { font-size: 16px; }
+    .page { padding: 24px 18px 64px; border: none; }
+    table { font-size: 0.85em; }
+    th, td { padding: 4px 6px; }
+}
+</style>
+</head>
+<body>
+<main class="page">
+<h1 id="polysaccharides-xxxix-on-the-enzymatic-degradation-of-chitin-and-chitosan-i">Polysaccharides XXXIX. On the enzymatic degradation of chitin and chitosan I.</h1>
+<blockquote>
+<p><strong>P. Karrer and A. Hofmann</strong> &nbsp;·&nbsp; <em>Helvetica Chimica Acta</em>, vol. <strong>12</strong> (1929), pp. 616–637.
+Submitted 18 April 1929, Chemical Institute, University of Zürich.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Source PDF</strong></td>
+<td><code>~/karrer1929.pdf</code> (22 pages, scanned reproduction)</td>
+</tr>
+<tr>
+<td><strong>OCR</strong></td>
+<td>Apple Vision (<code>ocrmac</code>), 300 DPI, 98–100% confidence</td>
+</tr>
+<tr>
+<td><strong>German source</strong></td>
+<td><code>karrer1929-chitin-chitosan-i.de.md</code> (on the fleet wiki) — verbatim OCR for verification</td>
+</tr>
+<tr>
+<td><strong>Translator</strong></td>
+<td>Rhadamanthus (Claude), 2026-04-29</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>Working translation. Not a published edition. Caveats in <a href="#translator-notes">§ Translator notes</a>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="tldr">TL;DR</h2>
+<p>Karrer (Nobel 1937) and Hofmann discover and name two new enzymes from
+vineyard-snail (<em>Helix pomatia</em>) hepatopancreatic juice:</p>
+<ul>
+<li><strong>Chitinase</strong> — cleaves chitin → d-N-acetyl-glucosamine. They achieve
+  ~85% conversion at p_H 5.2 and isolate the monosaccharide in good
+  crystalline yield (1.03 g from ~2 g chitin) — the first time anyone
+  obtained N-acetyl-glucosamine from chitin in good yield.</li>
+<li><strong>Chitosanase</strong> — cleaves chitosan, but the breakdown <strong>stops</strong> at
+  ~⅓ of theoretical reducing power, leaving stable polyglucosamine
+  intermediates of MW 540 / 630 / 657 (i.e. tri- and tetra-saccharides).
+  Isolated as three fractions (Pr. I, Pr. II u, Pr. II L) and characterized
+  as hydrochlorides, free sugars, and sulfates.</li>
+</ul>
+<p>The paper also defends Karrer's earlier (1922) claim that chitin's
+glucosamine residues are linked through nitrogen atoms (the
+"chitopyrrole" evidence) against objections from Hess (1928) and
+Meyer &amp; Mark (1928).</p>
+<p>This is paper <strong>#39</strong> of Karrer's polysaccharide series — a body of
+work that culminated in his 1937 Nobel Prize for the structures of
+carotenoids, flavins, and vitamin A.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#experimental-preparation-of-starting-material">Experimental — preparation of starting material</a></li>
+<li><a href="#a-enzymatic-cleavage-of-chitin">A. Enzymatic cleavage of chitin</a></li>
+<li><a href="#a1-degradation-of-native-chitin">A.1 Native chitin</a></li>
+<li><a href="#a2-acidity-dependence-of-reprecipitated-chitin-breakdown">A.2 Acidity dependence</a></li>
+<li><a href="#a3-kinetics-and-enzyme-dose-response">A.3 Kinetics + enzyme dose</a></li>
+<li><a href="#a4-maximum-degradation">A.4 Maximum degradation</a></li>
+<li><a href="#a5-isolation-of-the-breakdown-product">A.5 Isolation of breakdown product</a></li>
+<li><a href="#a6-properties-of-the-breakdown-product-d-n-acetyl-glucosamine">A.6 Properties → d-N-acetyl-glucosamine</a></li>
+<li><a href="#b-enzymatic-cleavage-of-chitosan">B. Enzymatic cleavage of chitosan</a></li>
+<li><a href="#b1-influence-of-concentration">B.1 Concentration</a></li>
+<li><a href="#b2-influence-of-acidity">B.2 Acidity</a></li>
+<li><a href="#b3-kinetics-and-enzyme-dose-response">B.3 Kinetics + enzyme dose</a></li>
+<li><a href="#b4-determination-of-the-maximum-degradation">B.4 Maximum degradation</a></li>
+<li><a href="#b5-isolation-of-the-breakdown-products">B.5 Isolation of breakdown products</a></li>
+<li><a href="#b6-properties-of-the-breakdown-products">B.6 Properties (hydrochlorides / free sugars / sulfates)</a></li>
+<li><a href="#translator-notes">Translator notes</a></li>
+</ul>
+<hr />
+<h2 id="introduction">Introduction</h2>
+<p>Investigations carried out in our laboratory in recent years²⁾ have
+shown that, under suitable conditions, native cellulose can be
+hydrolysed almost quantitatively to glucose by the ferments [enzymes]
+of the hepatopancreatic juice of the vineyard snail [<em>Helix pomatia</em>],
+whereas previously no enzyme had been known that could attack this
+resistant carbohydrate to more than a trace extent.</p>
+<p>We further demonstrated that the enzyme-resistance of cellulose
+depends very strongly on its micellar structure: every reprecipitation,
+or every redissolution, of the cellulose — which entails a disruption
+of the crystallites and an enlargement of the inner surface — strongly
+reduces its enzymatic robustness.</p>
+<blockquote>
+<p><em>"In natural structural cellulose, Nature attains the high enzymatic
+resistance which a structural substance must of course possess — not
+by means of any special chemical architecture, but rather by a tight
+and compact packing of the smallest particles; once that packing is
+disturbed, the relative enzymatic resistance disappears as well."</em> ³⁾</p>
+</blockquote>
+<p>A further support for this view lies in the recently obtained
+evidence¹⁾ that mercerization, which is associated with a disruption
+of the cellulose micelles, decreases the enzymatic resistance of the
+material — but to a much lesser degree if the mercerization is carried
+out under stretching of the fabric, in which case the alignment of the
+cellulose crystallites is better preserved.</p>
+<p>These experiences gave us the impulse to test another natural
+structural substance — one for which no effective ferment had hitherto
+been known — namely <strong>chitin</strong>, with respect to its behaviour towards
+the snail enzyme. In fact finely ground chitin (from lobster shells)
+is also attacked by snail juice, although fairly slowly; and as in the
+case of cellulose, here too one can extraordinarily increase the
+susceptibility by reprecipitating the chitin, which is most
+conveniently done from cold hydrochloric acid. The polysaccharide
+undergoes no detectable chemical change under this treatment, provided
+it is performed rapidly; even after reprecipitation, it gives a
+completely negative response to Fehling's solution.</p>
+<p>We give the chitin-cleaving ferment the name <strong>chitinase</strong>. It works
+best in weakly acidic solution. The optimum lies at about p_H = 5.2
+(set with phosphate buffer).</p>
+<p>The hydrolysis follows, at the start of the breakdown, approximately
+<strong>Schütz's rule</strong> — the amount of substrate cleaved is proportional to
+the square root of the cleavage time. Variation of the enzyme amount
+showed that, with otherwise identical reaction conditions and in the
+same time, doubling the enzyme corresponds to an increase in
+degradation by a factor of <strong>1.3 to 1.5</strong>. All these relationships are
+very similar to those observed in the enzymatic saccharification of
+cellulose.</p>
+<p>As the product of the enzymatic chitin hydrolysis one obtains
+<strong>N-acetyl-glucosamine</strong>, of which roughly 50% of the theoretical
+yield has so far been obtained in crystalline and pure form; the yield
+can probably be increased. Glucosamine itself appears to occur, if at
+all, only in traces.</p>
+<p>N-acetyl-glucosamine was first isolated from chitin by S. Fränkel and
+A. Kelly, by hydrolysis with 70% sulfuric acid³⁾; the yield, however,
+was rather small. We will attempt to analyse the cleavage products of
+the enzymatic chitin hydrolysis as completely as possible, since this
+must reveal whether all of the acetyl groups present in chitin are
+bound to the nitrogen, or whether — as has also been suspected — this
+is only partly the case.</p>
+<p>We have further investigated the behaviour of <strong>chitosan</strong>, which is
+prepared from chitin by heating with concentrated alkali, towards the
+snail ferment. It too is attacked rapidly, with the optimum acidity at
+p_H = 4.4–4.5.</p>
+<p>The time-course of the enzymatic chitosan breakdown — measured by the
+reducing power — also follows, approximately though by no means
+exactly, Schütz's rule (data and curves: cf. experimental section,
+<a href="#b3-kinetics-and-enzyme-dose-response">§ B.3</a>).</p>
+<p>Comparing the action of enzyme amounts 1, 2, 4, 8 on the same chitosan
+quantity, one finds that on doubling the enzyme the degradation grows
+by approximately a factor of <strong>1.7</strong>.</p>
+<p>Both these measurements and those obtained for chitin breakdown refer
+to experiments carried out with sugar-free, but otherwise
+unfurther-purified, snail juice. Of course it remains possible that
+further-purified chitinase and chitosanase produce hydrolyses obeying
+different regularities.</p>
+<p>It is a surprising result that the enzymatic hydrolysis of chitosan
+with snail enzyme leads neither to glucosamine nor to
+N-acetyl-glucosamine, but rather <strong>stops</strong> when the reducing power has
+reached about ⅓ of that which would arise on complete hydrolysis of
+chitosan to glucosamine. The breakdown product is not of uniform
+character; it can be isolated as the hydrochloride in the form of a
+colourless, amorphous powder, from which fractions can be extracted
+with hot alcohol, while the residue is very poorly soluble in alcohol.
+From these hydrochlorides the free polysaccharides can be precipitated
+by alcoholic diethylamine solution; these too could not so far be
+crystallized — nor could we manage to bring their sulfates, which are
+moderately soluble in dilute alcohol, into crystalline form.</p>
+<p>Molecular weight determinations carried out on the free sugars in
+water gave, for the fractions obtained from the alcohol-soluble
+chlorides, a molecular weight of 540; the polysaccharide fraction
+prepared from the chloride poorly soluble in alcohol had molecular
+weights of 630–657. The former therefore have the average molecular
+weight of triglucosamine compounds (M = 501), the latter of
+tetraglucosamine bodies (M = 662).</p>
+<p>These intermediate products of the chitosan breakdown still contain
+N-acetyl groups.</p>
+<p>Their most striking property is the <strong>extraordinary stability towards
+mineral acids</strong>. Despite their easy solubility in water and
+hydrochloric acid, their reducing power does not change after one
+hour's boiling with 4.3% HCl; 8.1% HCl, on one-hour boiling, increases
+it only by 25%; and only on one-hour heating with 38% HCl is nearly
+complete decomposition to glucosamine — which we isolated crystallized
+— attained.</p>
+<p>These polyglucosamines are thus more stable to hot HCl than any
+ordinary polysaccharide — even more stable than cellulose.</p>
+<p>A few years ago, P. Karrer and Alex. Smirnoff obtained from chitin, by
+zinc-dust distillation, <strong>chitopyrrole</strong> (i.e. α-methyl-N-amyl-pyrrole),
+and drew the conclusion that the glucosamine residues in chitin must,
+at least in part, be linked through nitrogen atoms¹⁾. Perhaps the —
+comparatively, with respect to ordinary polysaccharides — greater
+stability of the above-named polyglucosamines and of chitin towards
+acids is to be traced to this nitrogen-chaining. P. Karrer and J. ter
+Kuile²⁾ have shown that the glucosido-trimethyl-ammonium salts</p>
+<figure class="formula"><img alt="Glucosido-trimethyl-ammonium salt structure" src="karrer1929-figures/formula-1-glucosido-trimethylammonium.png" /></figure>
+<p>Against our view that the product of the chitin-zinc-dust distillation,
+chitopyrrole, argues for an N-linkage of the glucosamine residues in
+chitin, K. Hess³⁾ has — without experimental basis — raised the
+objection that chitopyrrole might owe its formation to a rearrangement
+phenomenon. Kurt H. Meyer and H. Mark⁴⁾ also believe that the
+appearance of acetyl-glucosamine on chitin hydrolysis is hard to
+reconcile with N-chaining. That this is no compelling argument follows,
+among other things, from the fact that Percy Brigl and Helmut Keppler⁵⁾
+recently succeeded in preparing an <strong>N-acetyl-diglucosylamine
+octaacetate</strong></p>
+<figure class="formula"><img alt="N-acetyl-diglucosylamin-octacetat structure" src="karrer1929-figures/formula-2-n-acetyl-diglucosylamin-octacetat.png" /></figure>
+<p>If Brigl and Keppler wish to compare diglucosylamine with chitosan
+with respect to behaviour towards nitrous acid⁶⁾, it must nevertheless
+be said that in their compound the NH-group is bound in an acetal-like
+manner, whereas in glucosamine it is bound in an amine-like manner.</p>
+<p>Since chitopyrrole could not be obtained from glucosamine itself by
+zinc-dust distillation⁷⁾, there is for the time being no reason to
+doubt that the compound is a primary product of the chitin breakdown.</p>
+<p><strong>References (introduction):</strong>
+¹⁾ Helv. <strong>5</strong>, 832 (1922). &nbsp;
+²⁾ Helv. <strong>5</strong>, 870 (1922). &nbsp;
+³⁾ K. Hess, <em>Die Chemie der Cellulose</em>, Leipzig 1928, p. 102. &nbsp;
+⁴⁾ B. <strong>61</strong>, 1937 (1928). &nbsp;
+⁵⁾ Z. physiol. Ch. <strong>81</strong>, 42 (1929). &nbsp;
+⁶⁾ Loc. cit., p. 42. &nbsp;
+⁷⁾ Helv. <strong>5</strong>, 838 (1922).</p>
+<hr />
+<h2 id="experimental-preparation-of-starting-material">Experimental — preparation of starting material</h2>
+<p>The chitin used in the present work was obtained from lobster
+carapaces by the customary preparation methods¹⁾; the chitosan was
+prepared after the procedure of Löwy²⁾.</p>
+<p>For purification we dissolved it in dilute acetic acid, precipitated
+it with alkali, washed and dried it.</p>
+<p>Native chitin is admittedly distinctly attacked by snail enzyme, but
+the cleavage proceeds slowly, as is to be expected from the horn-like
+character of the material. Even fine pulverization does not achieve
+much. We therefore — in order to obtain a highly dispersed starting
+material — reprecipitated the chitin from HCl solution; the
+reprecipitated chitin proved to hydrolyse incomparably more rapidly
+than the native form.</p>
+<p>That chitin, when it is dissolved only briefly at ordinary temperature
+in acid, can be reprecipitated unchanged has been shown by various
+researchers. Wester³⁾, for instance, reports that of 0.5136 g of
+chitin dissolved in 37% HCl, 0.4563 g of unchanged chitin could still
+be recovered after 12 hours.</p>
+<p>To bring about as rapid a dissolution as possible, we first stirred
+the chitin powder with a little concentrated HCl into a homogeneous
+slurry, and only afterwards added the bulk of the concentrated HCl
+needed for solution. If one adds all of the acid at once without prior
+stirring, lumps form, dissolution requires more time, and filtration
+goes badly.</p>
+<p>We then filtered the honey-yellow solution through an asbestos-charged
+Büchner funnel and precipitated the chitin by pouring it into a large
+volume of ice water; in this way it is obtained as white, gelatinous
+flakes. With this procedure it remained no longer than 5 minutes in
+solution, during which time no hydrolysis is to be feared. The
+reprecipitated chitin in fact showed no reducing power whatsoever.</p>
+<p>To prevent caking on drying, and to preserve the highly disperse state
+of the substrate that is important for ready attack by enzymes, we
+proceeded by a method that has also been used in the preparation of
+finely divided lichenin⁴⁾. After the chitin had been washed acid-free,
+we removed the water by several days' immersion in absolute ether,
+drained off, and removed the residual ether in a vacuum desiccator.
+The light-grey chitin powder thus prepared swells when stirred with
+water and is well suited for enzymatic degradation.</p>
+<p><strong>References (experimental):</strong>
+¹⁾ Th. R. Offer, Biochem. Z. <strong>7</strong>, 117ff. (1908). &nbsp;
+²⁾ E. Löwy, Biochem. Z. <strong>23</strong>, 47ff. (1909). &nbsp;
+³⁾ D. H. Wester, Arch. Pharm. <strong>247</strong>, 292 (1909). &nbsp;
+⁴⁾ P. Karrer and co-workers, Helv. <strong>6</strong>, 801 (1923).</p>
+<hr />
+<h2 id="a-enzymatic-cleavage-of-chitin">A. Enzymatic cleavage of chitin</h2>
+<h3 id="a1-degradation-of-native-chitin">A.1 Degradation of native chitin</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Expt 1)</th>
+<th>Expt 2) (control)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chitin powder, chitosan-free</td>
+<td>0.1 g</td>
+<td>0.1 g</td>
+</tr>
+<tr>
+<td>enzyme solution (1 snail)</td>
+<td>2 cm³</td>
+<td>—</td>
+</tr>
+<tr>
+<td>citrate-HCl buffer p_H 4.5</td>
+<td>1 cm³</td>
+<td>1 cm³</td>
+</tr>
+<tr>
+<td>distilled water</td>
+<td>2 cm³</td>
+<td>4 cm³</td>
+</tr>
+<tr>
+<td>toluene</td>
+<td>2 drops</td>
+<td>2 drops</td>
+</tr>
+</tbody>
+</table>
+<p>Held 8 days at 36 °C with occasional shaking, then filtered through
+asbestos and reducing power determined by Bertrand:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>KMnO₄ consumption</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expt 1)</td>
+<td>1.8 cm³ 0.1-N</td>
+</tr>
+<tr>
+<td>Expt 2)</td>
+<td>0.1 cm³ 0.1-N</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Native chitin is, although very slowly, nonetheless distinctly
+attacked by the enzyme of the snail intestine.</strong></p>
+</blockquote>
+<h3 id="a2-acidity-dependence-of-reprecipitated-chitin-breakdown">A.2 Acidity dependence of reprecipitated chitin breakdown</h3>
+<p>0.200 g reprecipitated chitin + ½ snail enzyme, 2 cm³ citrate-HCl or
+citrate-NaOH buffer (Sörensen scale), 2 cm³ water, 3 drops toluene, at
+36 °C with occasional shaking, 3 days. Filtered, Bertrand titrated:</p>
+<table>
+<thead>
+<tr>
+<th>p_H</th>
+<th>KMnO₄ 0.1-N consumed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.96</td>
+<td>8.1 cm³</td>
+</tr>
+<tr>
+<td>5.10</td>
+<td>9.8 cm³</td>
+</tr>
+<tr>
+<td>4.83</td>
+<td>8.2 cm³</td>
+</tr>
+<tr>
+<td>4.45</td>
+<td>5.6 cm³</td>
+</tr>
+<tr>
+<td>4.16</td>
+<td>4.5 cm³</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>The p_H optimum of chitinase is approximately 5.2 — the same as
+for cellulase.</strong></p>
+</blockquote>
+<h3 id="a3-kinetics-and-enzyme-dose-response">A.3 Kinetics and enzyme dose response</h3>
+<p><strong>Series 1):</strong> 2 cm³ enzyme (¼ snail) per 0.1 g reprecipitated chitin,
+3 cm³ phosphate buffer p_H 5.28, 5 cm³ water, 3 drops toluene, 36 °C.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><em>t</em> (days)</th>
+<th style="text-align: right;">KMnO₄ (cm³ 0.1-N)</th>
+<th style="text-align: right;">KMnO₄ / √t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">1.5</td>
+<td style="text-align: right;">3.0</td>
+</tr>
+<tr>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">3.1</td>
+<td style="text-align: right;">3.1</td>
+</tr>
+<tr>
+<td style="text-align: right;">2.1</td>
+<td style="text-align: right;">4.7</td>
+<td style="text-align: right;">3.2</td>
+</tr>
+<tr>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">7.4</td>
+<td style="text-align: right;">3.2</td>
+</tr>
+<tr>
+<td style="text-align: right;">14.0</td>
+<td style="text-align: right;">9.5*</td>
+<td style="text-align: right;">2.5</td>
+</tr>
+</tbody>
+</table>
+<p>* ≈52% degradation if reducing power is wholly due to acetyl-glucosamine.</p>
+<p><strong>Series 2):</strong> 1 cm³ enzyme (⅒ snail), otherwise identical:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><em>t</em> (days)</th>
+<th style="text-align: right;">KMnO₄ (cm³ 0.1-N)</th>
+<th style="text-align: right;">KMnO₄ / √t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">2.4</td>
+<td style="text-align: right;">2.4</td>
+</tr>
+<tr>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">4.7</td>
+<td style="text-align: right;">2.1</td>
+</tr>
+<tr>
+<td style="text-align: right;">14.0</td>
+<td style="text-align: right;">6.7</td>
+<td style="text-align: right;">1.8</td>
+</tr>
+</tbody>
+</table>
+<p>The time-course of the enzymatic cleavage of reprecipitated chitin
+follows, at the beginning of the reaction, approximately Schütz's rule.</p>
+<p>Comparing series 1 and 2 at equal times:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><em>t</em> (days)</th>
+<th style="text-align: right;">Enz 1 (½ snail)</th>
+<th style="text-align: right;">Enz 2 (¼ snail)</th>
+<th style="text-align: right;">Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">2.4</td>
+<td style="text-align: right;">3.1</td>
+<td style="text-align: right;">1.3</td>
+</tr>
+<tr>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">4.7</td>
+<td style="text-align: right;">7.1</td>
+<td style="text-align: right;">1.5</td>
+</tr>
+<tr>
+<td style="text-align: right;">14.0</td>
+<td style="text-align: right;">6.7</td>
+<td style="text-align: right;">9.5</td>
+<td style="text-align: right;">1.4</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Doubling the enzyme amount → 1.3–1.5× increase in degradation in
+equal times.</strong></p>
+</blockquote>
+<h3 id="a4-maximum-degradation">A.4 Maximum degradation</h3>
+<p>0.1 g reprecipitated chitin + 3 cm³ enzyme (1½ snails) + 3 cm³
+phosphate buffer p_H 5.2 + 10 cm³ water + 3 drops toluene, held
+<strong>10 days</strong> at 36 °C.</p>
+<p>Bertrand titration: <strong>15.4 cm³ 0.1-N KMnO₄</strong> consumed → <strong>85% degradation</strong>
+(taking N-acetyl-glucosamine's reducing power into account, see <a href="#a6-properties-of-the-breakdown-product-d-n-acetyl-glucosamine">A.6</a>).</p>
+<h3 id="a5-isolation-of-the-breakdown-product">A.5 Isolation of the breakdown product</h3>
+<p>Setup: 4.0 g reprecipitated chitin + 50 cm³ enzyme (25 snails) +
+1 cm³ 0.1-N HCl + 3 cm³ toluene at 36 °C.</p>
+<p>After 2 days the entire batch had set to a jelly (chitin swelling
+before dissolution). Diluted with 150 cm³ water. After 8 days half
+the chitin had dissolved; filtered, added 10 cm³ more enzyme
+(5 snails), let stand 2 more days at 36 °C.</p>
+<p><strong>Workup:</strong>
+1. Precipitate enzyme proteins with 600 cm³ absolute alcohol, filter.
+2. Concentrate filtrate in vacuum at 50 °C to 50 cm³.
+3. Digest ¼ h with animal charcoal on water bath; filter.
+4. Concentrate to 30 cm³; add 200 cm³ absolute alcohol → voluminous
+   dirty-yellow precipitate (0.4 g grey powder; only trace reducing
+   power). Filter.
+5. Evaporate filtrate to dryness; reflux residue with 200 cm³ absolute
+   methanol.
+6. Filter hot, concentrate to 60 cm³, cool → <strong>pure white needles</strong>
+   (in small druses) crystallize. Filter, wash with methanol then ether,
+   dry in vacuum desiccator. <strong>Yield: 0.81 g.</strong>
+7. From mother liquor: a further 0.22 g, identical melting point.</p>
+<p><strong>Total: 1.03 g pure crystallized substance from ~2 g of chitin</strong> —
+very probably the main breakdown product.</p>
+<h3 id="a6-properties-of-the-breakdown-product-d-n-acetyl-glucosamine">A.6 Properties of the breakdown product → d-N-acetyl-glucosamine</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solubility</td>
+<td>very readily in water; poorly in cold MeOH/EtOH; readily in hot alcohols</td>
+</tr>
+<tr>
+<td>Aqueous reaction</td>
+<td>neutral</td>
+</tr>
+<tr>
+<td>Taste</td>
+<td>strongly sweet</td>
+</tr>
+<tr>
+<td>Melting point (decomp.)</td>
+<td>indistinct ~190 °C</td>
+</tr>
+<tr>
+<td>Reducing power (Bertrand)</td>
+<td>0.0500 g consumed 9.4 cm³ 0.1-N KMnO₄ (replicate identical) ≈ 0.0304 g glucose ≈ <strong>60% of glucose's reducing power</strong></td>
+</tr>
+<tr>
+<td>Specific rotation, fresh</td>
+<td>[α]_D = +55.6° (0.2180 g in 11.335 g H₂O, 1 dm tube)</td>
+</tr>
+<tr>
+<td>Specific rotation, equilibrium (next day)</td>
+<td>[α]_D = +41.3°</td>
+</tr>
+<tr>
+<td>Mutarotation</td>
+<td><strong>yes</strong></td>
+</tr>
+<tr>
+<td>Phenylhydrazine + NaOAc, water bath</td>
+<td>only slight amorphous ppt; no crystalline osazone</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>All properties match the body that <strong>Fränkel and Kelly</strong> (1902)
+isolated in low yield from concentrated-H₂SO₄ chitin hydrolysates
+and identified as <strong>d-N-acetyl-glucosamine</strong>. Mutarotation was not
+noted by them, but their final [α]_D agrees with ours.</p>
+<p><strong>The only well-defined high-yield product of the enzymatic
+cleavage of chitin is therefore d-N-acetyl-glucosamine.</strong></p>
+</blockquote>
+<hr />
+<h2 id="b-enzymatic-cleavage-of-chitosan">B. Enzymatic cleavage of chitosan</h2>
+<h3 id="b1-influence-of-concentration">B.1 Influence of concentration</h3>
+<p>From a chitosan solution in dilute HCl (0.188 g per 5 cm³, set to
+p_H 4.6 with 0.1-N HCl), 5 cm³ aliquots were diluted with various
+volumes of dilute HCl at p_H 4.6, then 0.5 cm³ enzyme (¼ snail) +
+toluene added; 64 h at 36 °C; volume normalized; Bertrand titrated:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Expt</th>
+<th style="text-align: right;">Final volume</th>
+<th style="text-align: right;">KMnO₄ 0.1-N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1)</td>
+<td style="text-align: right;">5.5 cm³</td>
+<td style="text-align: right;">18.0 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">2)</td>
+<td style="text-align: right;">19.0 cm³</td>
+<td style="text-align: right;">13.1 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">3)</td>
+<td style="text-align: right;">50.0 cm³</td>
+<td style="text-align: right;">13.0 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">4)</td>
+<td style="text-align: right;">100.0 cm³</td>
+<td style="text-align: right;">7.5 cm³</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Within moderate enzyme concentrations, the breakdown is
+independent of chitosan concentration.</strong></p>
+</blockquote>
+<h3 id="b2-influence-of-acidity">B.2 Influence of acidity</h3>
+<p>Standard buffers cannot be used because chitosan-hydrochloride
+solutions are themselves strongly buffered. Each solution's p_H was
+determined colorimetrically with methyl-red against a Sörensen
+buffer-mixture colour scale.</p>
+<blockquote>
+<p><strong>Procedural note.</strong> The p_H must be measured <strong>after</strong> adding
+enzyme (the enzyme's protein content shifts the p_H slightly), but
+<strong>before</strong> adding toluene (the dye partitions into the toluene
+layer otherwise).</p>
+</blockquote>
+<p>5.0 cm³ chitosan/HCl (0.100 g chitosan, p_H 5.8) + (5−x) cm³ water +
+x cm³ of {0.05-N HCl, or 1:10 acetic acid, or 0.05-N NaOH} + 1 cm³
+enzyme (½ snail). Total 11 cm³, 1 cm³ pulled for p_H measurement,
+remainder + toluene held 20 h at 36 °C, Bertrand titrated:</p>
+<p><strong>HCl-acidic series:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">p_H</th>
+<th style="text-align: right;">KMnO₄ 0.1-N consumed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">3.9</td>
+<td style="text-align: right;">— * (Fehling-pptable chitosan remains)</td>
+</tr>
+<tr>
+<td style="text-align: right;">4.2</td>
+<td style="text-align: right;">4.3 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">4.1</td>
+<td style="text-align: right;">7.2 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">4.5</td>
+<td style="text-align: right;">7.2 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">4.6</td>
+<td style="text-align: right;">7.1 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">4.7</td>
+<td style="text-align: right;">6.5 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">7.8 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">5.3</td>
+<td style="text-align: right;">2.3 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">5.5</td>
+<td style="text-align: right;">2.2 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">5.7</td>
+<td style="text-align: right;">2.1 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">5.9</td>
+<td style="text-align: right;">2.2 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">6.2</td>
+<td style="text-align: right;">2.0 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">(6.6) **</td>
+<td style="text-align: right;">(1.0 cm³)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Acetic-acid series</strong> (selected):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">p_H</th>
+<th style="text-align: right;">KMnO₄ 0.1-N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">4.6</td>
+<td style="text-align: right;">5.4 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">5.7</td>
+<td style="text-align: right;">7.0 cm³</td>
+</tr>
+</tbody>
+</table>
+<p>* Fehling-precipitable chitosan still present.
+** Beginning of chitosan flocculation.</p>
+<blockquote>
+<p><strong>The breakdown curve has a sharp maximum at p_H 4.4–4.5.</strong> At equal
+p_H the breakdown is the same in HCl and acetic acid solutions. The
+acidity does not change during the breakdown.</p>
+</blockquote>
+<figure><img alt="Fig. 1 — chitosanase activity vs pH (HCl-acidic) showing sharp maximum at p_H 4.4–4.5" src="karrer1929-figures/fig-1-ph-vs-degradation.png" /><figcaption><em>Fig. 1.</em> Chitosanase activity (cm³ 0.1-N KMnO₄ consumed) vs. p_H, in HCl-acidic solution (×) and acetic-acid solution (○). Sharp maximum at p_H 4.4–4.5.</figcaption></figure>
+<h3 id="b3-kinetics-and-enzyme-dose-response">B.3 Kinetics and enzyme dose response</h3>
+<p>Same chitosan/HCl stock for all four series (0.100 g per 5 cm³,
+p_H 5.3). Conditions held constant: substrate ≈1%, p_H 4.4–4.5, 36 °C.
+Enzyme amounts in ratio 1 : 2 : 4 : 8.</p>
+<p><strong>Series 1)</strong> — 2 cm³ enzyme (1 snail) per 0.1 g chitosan:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><em>t</em> (h)</th>
+<th style="text-align: right;">KMnO₄ 0.1-N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">4.8 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">6.3 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">3.5</td>
+<td style="text-align: right;">7.4 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">4.4</td>
+<td style="text-align: right;">7.7 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">6.5</td>
+<td style="text-align: right;">8.1* cm³</td>
+</tr>
+</tbody>
+</table>
+<p>* = 26% of glucosamine's reducing power.</p>
+<p><strong>Series 2)</strong> — 1 cm³ enzyme (½ snail):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><em>t</em> (h)</th>
+<th style="text-align: right;">KMnO₄ 0.1-N</th>
+<th style="text-align: right;">√t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">1.4 cm³</td>
+<td style="text-align: right;">1.97</td>
+</tr>
+<tr>
+<td style="text-align: right;">1.5</td>
+<td style="text-align: right;">3.2 cm³</td>
+<td style="text-align: right;">2.60</td>
+</tr>
+<tr>
+<td style="text-align: right;">2.5</td>
+<td style="text-align: right;">4.5 cm³</td>
+<td style="text-align: right;">2.85</td>
+</tr>
+<tr>
+<td style="text-align: right;">3.5</td>
+<td style="text-align: right;">5.5 cm³</td>
+<td style="text-align: right;">2.95</td>
+</tr>
+<tr>
+<td style="text-align: right;">4.5</td>
+<td style="text-align: right;">5.9 cm³</td>
+<td style="text-align: right;">2.79</td>
+</tr>
+<tr>
+<td style="text-align: right;">5.5</td>
+<td style="text-align: right;">6.5* cm³</td>
+<td style="text-align: right;">2.78</td>
+</tr>
+</tbody>
+</table>
+<p>* = 20.6% of glucosamine's reducing power.</p>
+<p><strong>Series 3)</strong> — 0.5 cm³ enzyme:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><em>t</em> (h)</th>
+<th style="text-align: right;">KMnO₄ 0.1-N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: right;">3.2 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">6.0</td>
+<td style="text-align: right;">4.3 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">22.0</td>
+<td style="text-align: right;">7.0 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">30.5</td>
+<td style="text-align: right;">7.5 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">48.0</td>
+<td style="text-align: right;">7.9 cm³</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Series 4)</strong> — 0.25 cm³ enzyme:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><em>t</em> (h)</th>
+<th style="text-align: right;">KMnO₄ 0.1-N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">4.8</td>
+<td style="text-align: right;">0.7 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">23.0</td>
+<td style="text-align: right;">5.0 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">30.0</td>
+<td style="text-align: right;">5.5 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">46.5</td>
+<td style="text-align: right;">6.5 cm³</td>
+</tr>
+<tr>
+<td style="text-align: right;">94.0</td>
+<td style="text-align: right;">8.2 cm³</td>
+</tr>
+</tbody>
+</table>
+<figure><img alt="Fig. 2 — kinetics of chitosan breakdown, series 1 (2 cm³ enzyme) and series 2 (1 cm³)" src="karrer1929-figures/fig-2-kinetics-series-1-2.png" /><figcaption><em>Fig. 2.</em> Time course (hours) of KMnO₄ consumption for series 1 (2 cm³ enzyme) and series 2 (1 cm³). Square-root-of-time profile per Schütz's rule.</figcaption></figure>
+<figure><img alt="Fig. 3 — kinetics of chitosan breakdown, series 3 (0.5 cm³ enzyme) and series 4 (0.25 cm³)" src="karrer1929-figures/fig-3-kinetics-series-3-4.png" /><figcaption><em>Fig. 3.</em> Time course (hours) of KMnO₄ consumption for series 3 (0.5 cm³ enzyme) and series 4 (0.25 cm³). Same square-root profile, longer time scale.</figcaption></figure>
+<p><strong>Summary:</strong> the time-course follows Schütz's rule (substrate cleaved ∝ √t).</p>
+<table>
+<thead>
+<tr>
+<th>Enzyme</th>
+<th style="text-align: right;">0.25 cm³</th>
+<th style="text-align: right;">0.50 cm³</th>
+<th style="text-align: right;">1.0 cm³</th>
+<th style="text-align: right;">2.0 cm³</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean degradation</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">1.7</td>
+<td style="text-align: right;">2.8</td>
+<td style="text-align: right;">4.8</td>
+</tr>
+<tr>
+<td>Single→double ratio</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">1.70</td>
+<td style="text-align: right;">1.65</td>
+<td style="text-align: right;">1.72</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Doubling the enzyme amount → 1.7× increase in degradation.</strong>
+(Compare 1.3–1.5× for chitin in <a href="#a3-kinetics-and-enzyme-dose-response">A.3</a>.)</p>
+</blockquote>
+<h3 id="b4-determination-of-the-maximum-degradation">B.4 Determination of the maximum degradation</h3>
+<p><strong>Expt 1):</strong> 0.090 g chitosan + 10 cm³ dilute HCl + 1 cm³ enzyme
+(½ snail) + toluene, p_H 4.8, 36 °C. After 6 days another
+1 cm³ enzyme added; total 12 days. <strong>9.1 cm³ 0.1-N KMnO₄</strong> consumed
+≈ 30.2 mg glucosamine ≈ <strong>33.6% of glucosamine's reducing power</strong>.</p>
+<p><strong>Expt 2):</strong> 0.090 g + 3 cm³ enzyme (1½ snails) + toluene, p_H 4.6,
+21 days at 36 °C. <strong>9.0 cm³ 0.1-N KMnO₄</strong> ≈ <strong>32.2%</strong>.</p>
+<p><strong>Expt 3) (fresh undialysed enzyme):</strong> 0.600 g chitosan + 1.5 cm³
+fresh enzyme (1.3 snails), p_H 4.4, 36 °C, 10-cm³ aliquots:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Time</th>
+<th style="text-align: right;">KMnO₄ 0.1-N</th>
+<th style="text-align: right;">% of glucosamine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">17 h</td>
+<td style="text-align: right;">8.7 cm³</td>
+<td style="text-align: right;">28.0 %</td>
+</tr>
+<tr>
+<td style="text-align: right;">42 h</td>
+<td style="text-align: right;">9.1 cm³</td>
+<td style="text-align: right;">29.3 %</td>
+</tr>
+<tr>
+<td style="text-align: right;">110 h</td>
+<td style="text-align: right;">9.9 cm³</td>
+<td style="text-align: right;">32.0 %</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Maximum reducing-power yield in chitosan breakdown is ~33%, far
+below what would be expected for full breakdown to monosaccharide.</strong>
+The kinetic curves likewise asymptote here.</p>
+<p>Therefore <strong>chitosan breakdown gives larger complexes, not
+monosaccharides</strong>.</p>
+</blockquote>
+<p>It is curious that already after a short reaction time of the enzyme —
+when only ~⅙ of the final reducing power has been reached — alkali
+addition no longer precipitates unchanged chitosan. Either soluble
+intermediates form, or the breakdown products colloidally hold
+unchanged chitosan in solution.</p>
+<h3 id="b5-isolation-of-the-breakdown-products">B.5 Isolation of the breakdown products</h3>
+<p>Standard workup:
+1. Precipitate enzyme proteins with <strong>alcohol-ether</strong> (4× volume).
+2. Concentrate filtrate in vacuum.
+3. Digest with animal charcoal.
+4. Concentrate further.
+5. Precipitate breakdown products with absolute alcohol.</p>
+<p>Enzyme-protein control: 4 cm³ enzyme alone, processed identically,
+gave only 0.020 g residue — i.e. background contamination is small.</p>
+<h4 id="setup-1">Setup 1</h4>
+<p>4.0 g chitosan + 100 cm³ dilute HCl + 15 cm³ enzyme (7½ snails),
+p_H 4.5, diluted to 200 cm³, + 5 cm³ toluene, 36 °C, <strong>26 days</strong>
+until reducing power plateaued.</p>
+<p>Workup → <strong>Pr. I</strong> (white product), <strong>2.3 g</strong>, plus 0.8 g recovered
+from re-precipitation of the alcoholic filtrate, combined to <strong>3.1 g
+total Pr. I</strong>.</p>
+<h4 id="setup-2">Setup 2</h4>
+<p>6.7 g chitosan + 40 cm³ enzyme (20 snails) in 600 cm³ at p_H 4.0, 36 °C.
+After 21 days: 5 cm³ aliquots consumed 5.0 cm³ 0.1-N KMnO₄ ≈ <strong>29% of
+glucosamine reducing power</strong>.</p>
+<p>Workup gave two fractions, separated by alcohol solubility:</p>
+<table>
+<thead>
+<tr>
+<th>Fraction</th>
+<th>Behaviour</th>
+<th style="text-align: right;">Yield</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pr. II u</strong></td>
+<td>poorly soluble in alcohol ("u" = <em>unlöslich</em>)</td>
+<td style="text-align: right;">2.8 g</td>
+</tr>
+<tr>
+<td><strong>Pr. II L</strong></td>
+<td>readily soluble in alcohol ("L" = <em>löslich</em>)</td>
+<td style="text-align: right;">1.6 + 1.1 = 2.7 g</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Note: the separation isn't sharp — further extraction of Pr. II u
+continually leaks more material into alcohol. The two fractions were
+treated as operationally distinct rather than chemically distinct.</p>
+</blockquote>
+<h3 id="b6-properties-of-the-breakdown-products">B.6 Properties of the breakdown products</h3>
+<p>Since the breakdown was carried out in HCl-acidic solution, the
+products initially appear as hydrochlorides.</p>
+<h4 id="a-hydrochlorides">a) Hydrochlorides</h4>
+<p>Properties: very readily soluble in water; somewhat in MeOH; poorly in
+EtOH; insoluble in organic solvents. Aqueous solution acidic to litmus.
+<strong>No</strong> colour reaction with iodine/KI.</p>
+<blockquote>
+<p>0.100 g Pr. I consumed 5.7 cm³ 0.1-N KMnO₄ → <strong>22%</strong> of glucosamine
+hydrochloride's reducing power.</p>
+</blockquote>
+<p><strong>Elemental analyses of Pr. I:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Determination</th>
+<th>Found</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.00645 g → 0.375 cm³ N₂ (16.5 °C, 735 mm)</td>
+<td>N = 6.67%</td>
+</tr>
+<tr>
+<td>0.00501 g → 0.295 cm³ N₂ (17.0 °C, 734 mm)</td>
+<td>N = 6.70%</td>
+</tr>
+<tr>
+<td>0.03800 g → 0.02304 g AgCl</td>
+<td>Cl = 15.0%</td>
+</tr>
+<tr>
+<td>0.03695 g → 0.02264 g AgCl</td>
+<td>Cl = 15.2%</td>
+</tr>
+</tbody>
+</table>
+<p>For comparison, the calculated hydrochloride of a trisaccharide of 3
+glucosamine residues with loss of 2 H₂O: <strong>N = 6.89%, Cl = 17.2%</strong>.</p>
+<blockquote>
+<p>N is right; Cl is below theoretical. The interpretation: not all
+nitrogen atoms are present as free, salt-forming amino/imino groups
+— some are still acetylated (as in chitosan).</p>
+</blockquote>
+<p>Re-treatment of Pr. I with fresh enzyme (0.200 g + 1 cm³ enzyme,
+12 days at 36 °C) raised reducing power to <strong>29%</strong> of glucosamine —
+not exceeding the established asymptote.</p>
+<p><strong>Liberation of free sugar from the hydrochloride:</strong> simpler than the
+classical Abderhalden method⁵⁾. Dissolve hydrochloride in water, add
+absolute alcohol to incipient turbidity, drop in slightly more than
+the calculated diethylamine; the free sugar precipitates as white
+flakes (only traces of halogen). Re-dissolve in water, treat once more
+with diethylamine in alcohol, precipitate with abundant alcohol. Wash
+with alcohol then ether → halogen-free product.</p>
+<p>⁵⁾ E. Abderhalden, <em>Biochemisches Handlexikon</em> II, 537.</p>
+<h4 id="b-free-sugars">b) Free sugars</h4>
+<p>Properties: very readily soluble in water; almost insoluble in MeOH/EtOH.
+Aqueous solution <strong>basic</strong> to litmus (contrast with hydrochlorides!).
+No iodine reaction. Weakly sweet.</p>
+<table>
+<thead>
+<tr>
+<th>Fraction</th>
+<th style="text-align: right;">Reducing power (% of glucosamine)</th>
+<th style="text-align: right;">Specific rotation [α]_D</th>
+<th style="text-align: right;">Cryoscopic MW</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pr. I, free sugar</td>
+<td style="text-align: right;">25.2 %</td>
+<td style="text-align: right;">+3.7°</td>
+<td style="text-align: right;"><strong>657</strong></td>
+</tr>
+<tr>
+<td>Pr. II u, free sugar</td>
+<td style="text-align: right;">25.2 %</td>
+<td style="text-align: right;">+3.7°</td>
+<td style="text-align: right;"><strong>630</strong></td>
+</tr>
+<tr>
+<td>Pr. II L, free sugar</td>
+<td style="text-align: right;">27.2 %</td>
+<td style="text-align: right;">+6.8°</td>
+<td style="text-align: right;"><strong>540</strong></td>
+</tr>
+</tbody>
+</table>
+<p>For comparison, calculated MW of 3- and 4-glucosamine condensates
+(no acetyl): <strong>trisaccharide M = 501; tetrasaccharide M = 662</strong>.</p>
+<blockquote>
+<p>The Pr. I and Pr. II u fractions are tetra-glucosamine-sized; Pr. II L
+is tri-glucosamine-sized. The presence of acetyl groups would shift
+things slightly upward.</p>
+<p>Argument that the products are not "free monosaccharide + unchanged
+chitosan": chitosan is water-insoluble and gives a strong iodine
+reaction; these products are water-soluble and inert to iodine. Plus
+chitosan-sulfate is poorly water-soluble while these fractions'
+sulfates are very soluble.</p>
+</blockquote>
+<p><strong>Acid stability</strong> — 0.0500 g free sugar boiled 1 h under reflux in
+5 cm³ HCl of varied concentration:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">HCl %</th>
+<th style="text-align: right;">KMnO₄ consumed (cm³ 0.1-N)</th>
+<th style="text-align: right;">% degradation (vs glucosamine)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">4.3</td>
+<td style="text-align: right;">4.1</td>
+<td style="text-align: right;">1.0 %</td>
+</tr>
+<tr>
+<td style="text-align: right;">8.1</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">5.0 %</td>
+</tr>
+<tr>
+<td style="text-align: right;">15.5</td>
+<td style="text-align: right;">10.4</td>
+<td style="text-align: right;">10.4 %</td>
+</tr>
+<tr>
+<td style="text-align: right;">38.0</td>
+<td style="text-align: right;">12.8</td>
+<td style="text-align: right;">12.8 %</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>The acid stability of these polyglucosamines exceeds even that of
+starch and cellulose.</strong> Glucosamine hydrochloride is recovered
+crystallized only after 1 h reflux in concentrated HCl.</p>
+</blockquote>
+<h4 id="c-sulfates">c) Sulfates</h4>
+<p>The sulfate is much less soluble in aqueous alcohol than the free
+sugar or hydrochloride. <strong>Method:</strong> dissolve free sugar (or, more
+conveniently, hydrochloride) in a little water, add absolute alcohol
+to incipient turbidity, drop in slightly more than the calculated
+H₂SO₄ diluted with alcohol/water → flocculent precipitate. If it
+balls up on the wall, decant, redissolve in water, reprecipitate with
+alcohol. Wash with alcohol, then ether.</p>
+<p>Yields: 1.0 g Pr. II u (free sugar) → 1.25 g sulfate; 0.7 g Pr. II L
+(free sugar) → 0.8 g sulfate.</p>
+<p>Properties: very readily soluble in water; almost insoluble in common
+organics. Aqueous solution acidic to litmus.</p>
+<p><strong>Gravimetric SO₄ analysis (via BaSO₄):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Sample</th>
+<th>Found H₂SO₄</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pr. II u sulfate, run 1 (0.05125 g → 0.02395 g BaSO₄)</td>
+<td>19.6 %</td>
+</tr>
+<tr>
+<td>Pr. II u sulfate, run 2 (0.11270 g → 0.05159 g BaSO₄)</td>
+<td>19.3 %</td>
+</tr>
+<tr>
+<td>Pr. II L sulfate, run 1 (0.04957 g → 0.01957 g BaSO₄)</td>
+<td>16.5 %</td>
+</tr>
+<tr>
+<td>Pr. II L sulfate, run 2 (0.08084 g → 0.03182 g BaSO₄)</td>
+<td>16.4 %</td>
+</tr>
+</tbody>
+</table>
+<p>Calculated H₂SO₄ for a glucosamine-tetrasaccharide with all
+amino groups saturated: <strong>22.7%</strong>.</p>
+<blockquote>
+<p><strong>The two fractions have distinctly different acid-binding capacity
+(and so probably different acetyl content).</strong> Pr. II u (~19.5%) is
+closer to the fully-saturated tetrasaccharide than Pr. II L (~16.4%).</p>
+</blockquote>
+<hr />
+<p><strong>Zürich, Chemical Institute of the University.</strong></p>
+<hr />
+<h2 id="translator-notes">Translator notes</h2>
+<ol>
+<li>
+<p><strong>OCR.</strong> Apple Vision via <code>ocrmac</code> at 300 DPI returned 98–100%
+   confidence on all 22 PDF pages. The PDF's pre-existing Adobe
+   Capture OCR had the classic "letter+space" insertion bug ("au f
+   ond d u b allon") and was discarded. <code>clean_ocr.py</code> rejoined 69
+   line-break hyphens. Residual artifacts remain mostly in:
+   - subscripts inside formulas (<code>KMnO₄</code>, <code>H₂SO₄</code>, <code>BaSO₄</code> came back
+     as <code>KMn0,</code>, <code>H,SO,</code>, <code>BaSO,</code>) — reconstructed from context;
+   - the figure 1 region of page 627 (data interleaved with the
+     embedded curve image);
+   - "p_H" was printed in 1929 as <code>Pₕ</code> and OCRed variously as Pa, Pf,
+     Pr, PE, PH, Pm, Pu — all rendered as <code>p_H</code>.</p>
+</li>
+<li>
+<p><strong>Paper boundaries.</strong> The PDF contains 22 pages but the Karrer
+   paper is pages 616–637 within Helv. Chim. Acta vol. 12. The PDF
+   begins mid-paragraph in a French paper by Zolliker (which ends "à
+   Neuchâtel, Laboratoire de Chimie de l'Université") and ends with
+   the start of a Rupe &amp; Pieper paper on cyano-compound hydrogenation.
+   Both have been trimmed away; this translation covers Karrer #39 only.</p>
+</li>
+<li>
+<p><strong>Specific rotations</strong> in the original were typeset as <code>[α]_D</code>. OCR
+   variously returned <code>[al D</code>, <code>[alb</code>, <code>[a)D</code>. All rendered uniformly.</p>
+</li>
+<li>
+<p><strong>"Snail enzyme / snail juice"</strong> = digestive juice from the
+   hepatopancreas of <em>Helix pomatia</em> (the European vineyard snail), a
+   classic 1920s source of cellulase and other polysaccharide-cleaving
+   enzymes. "1 snail" in the experimental section means one snail's
+   worth of juice — a colloquial unit of enzyme activity.</p>
+</li>
+<li>
+<p><strong>"Bertrand titration"</strong> is the 1906 Bertrand method: reducing
+   sugars reduce alkaline copper-tartrate (Fehling-like), the Cu₂O
+   precipitate is dissolved in Fe³⁺/H₂SO₄, and the resulting Fe²⁺ is
+   back-titrated with KMnO₄. Hence "consumed X cm³ 0.1-N KMnO₄"
+   throughout.</p>
+</li>
+<li>
+<p><strong>Pr. I, Pr. II u, Pr. II L</strong> are operational designations the
+   authors used for their three breakdown-product fractions:
+   - <strong>Pr.</strong> = <em>Präparat</em> (preparation/sample);
+   - <strong>u</strong> = <em>unlöslich</em> (insoluble in alcohol);
+   - <strong>L</strong> = <em>löslich</em> (soluble in alcohol).</p>
+</li>
+<li>
+<p><strong>Figures 1, 2, 3</strong> and the two structural formulas are reproduced
+   from 300-DPI scans of the original PDF. Crop boxes derived from
+   Apple Vision OCR bounding-box landmarks (page-number band, caption
+   row, adjacent body-text rows) so the figures are cleanly bounded
+   without neighboring-text bleed. Image files live in
+   <code>karrer1929-figures/</code> (in the standalone HTML build) or are
+   referenced by relative path on the wiki page.</p>
+</li>
+<li>
+<p><strong>Translation philosophy.</strong> Faithful where chemistry matters; light
+   modernization of academic German prose (long sentences split, some
+   passive voice activated). Direct quotations from Karrer's earlier
+   work (the indented italic block in <a href="#introduction">the introduction</a>)
+   preserved verbatim in spirit.</p>
+</li>
+</ol>
+<hr />
+<p><em>Last updated: 2026-04-29 by R (rhadamanthus). Source PDF in <code>~/karrer1929.pdf</code>. German OCR sister-file: karrer1929-chitin-chitosan-i.de.md (on the fleet wiki).</em></p>
+</main>
+</body>
+</html>
