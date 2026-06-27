@@ -1,4 +1,4 @@
-In 1929, Albert Hoffman (who would later go on to discover LSD) wrote a doctoral thesis where he reported on the enzymatic breakdown of chitin and chitosan, showing (among other things) for the first time that its chemical structure was analogous to that of cellulose, the structural material of plants.
+In 1929, Albert Hofmann (who would later go on to discover LSD) wrote a doctoral thesis where he reported on the enzymatic breakdown of chitin and chitosan, showing (among other things) for the first time that its chemical structure was analogous to that of cellulose, the structural material of plants.
 
 This was considered (and still is, if you ask me) pretty damn interesting.
 
